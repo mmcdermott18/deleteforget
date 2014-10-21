@@ -113,6 +113,10 @@ body {
     float: left;
 }
 
+.onlySmall {
+    display: none;
+}
+
 .rightcolumn {
     width: 49%;
     margin-left: 1%;
@@ -302,8 +306,46 @@ img {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (max-width: 35em) {
+@media only screen and (max-width: 1200px) {
     /* Style adjustments for viewports that meet the condition */
+    .container {
+    width: 95%;
+    margin: 10px auto;
+    padding: 20px 0;
+}
+}
+
+@media only screen and (max-width: 900px) {
+    /* Style adjustments for viewports that meet the condition */
+    .container {
+        width: 80%;
+        margin: 10px auto;
+        padding: 5px 0;
+    }
+    .leftcolumn {
+        width: 100%;
+        float: none;
+    }
+    .onlySmall {
+        display: block;
+    }
+    .rightcolumn {
+        display: none;
+    }
+    .inside {
+        width: 100%;
+        float: left;
+    }
+
+    .imgcontain {
+        text-align: left; /*also centers imagers?!*/
+    }
+
+    .insideright {
+        width: 100%;
+        margin: 15px 0;
+        float: left;
+    }
 }
 
 @media print,
