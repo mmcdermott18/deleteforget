@@ -109,6 +109,34 @@ body {
     font-family: 'Fira Mono', monospace;
 }
 
+.lightbox {
+    display: none;
+    background-color: rgba(0,0,0,.5);
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#slide1, #slide2, #slide3, #slide4, #slide5, #slide6, #slide7, #slide8, #slide9, #slide10, #slide11, #slide12, #slide13, #slide14, #slide15 {
+    width: 1400px;
+    height: 660px;
+    display: none;
+    margin: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: whitesmoke;
+    border: 1px #666 solid;
+    border-radius: 10px;
+    z-index: 2;
+    outline: 0;
+}
+
 .container {
     width: 80%;
     margin: 20px auto;
@@ -141,6 +169,11 @@ body {
     background-position: top;
     /*background-color: white;*/
     box-shadow: 5px 5px 5px #333;
+}
+
+.slideContain {
+    width: 90%;
+    margin: 20px auto;
 }
 
 .inside {
