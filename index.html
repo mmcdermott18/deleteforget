@@ -55,7 +55,7 @@
         </div> <!-- end container -->
 
         <!--                 slide 1                  -->
-       <div id="slide1" tabindex="-1">
+       <div id="slide1">
             <div class="slideContain">
                 <div class="inside">
                     <div class="imgcontain">
@@ -84,7 +84,7 @@
         </div> <!-- end slide1 -->
 
         <!--                 slide 2                 -->
-        <div id="slide2" tabindex="-1">
+        <div id="slide2">
             <div class="slideContain">
                 <div class="inside">
                     <div class="imgcontain">
@@ -114,7 +114,7 @@
         </div> <!-- end slide2 -->
 
         <!--                 slide 3                 -->
-        <div id="slide3" tabindex="-1">
+        <div id="slide3">
             <div class="slideContain">
                 <div class="inside">
                     <div class="imgcontain">
@@ -487,7 +487,7 @@
                             <li>Computer: Fleet Library #09</li>
                             <li>Location: Desktop</li>
                         </ul>
-                        <p><a id="next15" href="#">Next</a></p>
+                        <p><a id="next15" href="#">Beginning</a></p>
                         <p><a id="previous15" href="#">Previous</a></p>
                         <p><a id="close15" href="#">Close</a></p>
                     </div>
@@ -513,7 +513,15 @@
 
                 // escape key
                 $(document).keyup(function(e) {
-                    if (e.keyCode == 27 || 32) { 
+                    if (e.keyCode == 27) { 
+                        $("#slide"+win).fadeOut(500);                       
+                        $(".lightbox").fadeOut(500);
+                    }
+                });
+
+                 // spacebar 
+                $(document).keyup(function(e) {
+                    if (e.keyCode == 32) { 
                         $("#slide"+win).fadeOut(500);                       
                         $(".lightbox").fadeOut(500);
                     }
@@ -524,16 +532,14 @@
                     $("#slide1").fadeOut(500);
                     $(".lightbox").fadeOut(500);
                 });
-                $("#open1").click(function(e){
-                    e.preventDefault();
-                    $("#slide1").fadeIn(500,function(){$(this).focus();});
+                $("#open1").click(function(){
+                    $("#slide1").fadeIn(500);
                     $(".lightbox").fadeIn(500);
                     win = 1;
                 });
-                $("#next1").click(function(e){
-                    e.preventDefault();
+                $("#next1").click(function(){
                     $("#slide1").fadeOut(250);
-                    $("#slide2").fadeIn(250,function(){$(this).focus();});
+                    $("#slide2").fadeIn(250);
                     win = 2;
                 });
 
@@ -542,9 +548,8 @@
                     $("#slide2").fadeOut(500);
                     $(".lightbox").fadeOut(500);
                 });
-                $("#open2").click(function(e){
-                    e.preventDefault();
-                    $("#slide2").fadeIn(500,function(){$(this).focus();});
+                $("#open2").click(function(){
+                    $("#slide2").fadeIn(500);
                     $(".lightbox").fadeIn(500);
                     win = 2;
                 });
@@ -564,8 +569,8 @@
                     $("#slide3").fadeOut(500);
                     $(".lightbox").fadeOut(500);
                 });
-                $("#open3").click(function(e){
-                    $("#slide3").fadeIn(500,function(){$(this).focus();});
+                $("#open3").click(function(){
+                    $("#slide3").fadeIn(500);
                     $(".lightbox").fadeIn(500);
                     win = 3;
                 });
@@ -823,7 +828,7 @@
                 });
                 $("#next15").click(function(){
                     $("#slide15").fadeOut(250);
-                    $("#slide16").fadeIn(250);
+                    $("#slide1").fadeIn(250);
                     win = 16
                 });
                 $("#previous15").click(function(){
@@ -833,66 +838,66 @@
                 });
 
                 // close by outside click
-                $("#slide1").on('blur',function(){
-                    $(this).fadeOut(500);
-                    $(".lightbox").fadeOut(500);
-                });
-                $("#slide2").on('blur',function(){
-                    $(this).fadeOut(500);
-                    $(".lightbox").fadeOut(500);
-                });
-                $("#slide3").on('blur',function(){
-                    $(this).fadeOut(500);
-                    $(".lightbox").fadeOut(500);
-                });
-                $("#slide4").on('blur',function(){
-                    $(this).fadeOut(500);
-                    $(".lightbox").fadeOut(500);
-                });
-                $("#slide5").on('blur',function(){
-                    $(this).fadeOut(500);
-                    $(".lightbox").fadeOut(500);
-                });
-                $("#slide6").on('blur',function(){
-                    $(this).fadeOut(500);
-                    $(".lightbox").fadeOut(500);
-                });
-                $("#slide7").on('blur',function(){
-                    $(this).fadeOut(500);
-                    $(".lightbox").fadeOut(500);
-                });
-                $("#slide8").on('blur',function(){
-                    $(this).fadeOut(500);
-                    $(".lightbox").fadeOut(500);
-                });
-                $("#slide9").on('blur',function(){
-                    $(this).fadeOut(500);
-                    $(".lightbox").fadeOut(500);
-                });
-                $("#slide10").on('blur',function(){
-                    $(this).fadeOut(500);
-                    $(".lightbox").fadeOut(500);
-                });
-                $("#slide11").on('blur',function(){
-                    $(this).fadeOut(500);
-                    $(".lightbox").fadeOut(500);
-                });
-                $("#slide12").on('blur',function(){
-                    $(this).fadeOut(500);
-                    $(".lightbox").fadeOut(500);
-                });
-                $("#slide13").on('blur',function(){
-                    $(this).fadeOut(500);
-                    $(".lightbox").fadeOut(500);
-                });
-                $("#slide14").on('blur',function(){
-                    $(this).fadeOut(500);
-                    $(".lightbox").fadeOut(500);
-                });
-                $("#slide15").on('blur',function(){
-                    $(this).fadeOut(500);
-                    $(".lightbox").fadeOut(500);
-                });
+                // $("#slide1").on('blur',function(){
+                //     $(this).fadeOut(500);
+                //     $(".lightbox").fadeOut(500);
+                // });
+                // $("#slide2").on('blur',function(){
+                //     $(this).fadeOut(500);
+                //     $(".lightbox").fadeOut(500);
+                // });
+                // $("#slide3").on('blur',function(){
+                //     $(this).fadeOut(500);
+                //     $(".lightbox").fadeOut(500);
+                // });
+                // $("#slide4").on('blur',function(){
+                //     $(this).fadeOut(500);
+                //     $(".lightbox").fadeOut(500);
+                // });
+                // $("#slide5").on('blur',function(){
+                //     $(this).fadeOut(500);
+                //     $(".lightbox").fadeOut(500);
+                // });
+                // $("#slide6").on('blur',function(){
+                //     $(this).fadeOut(500);
+                //     $(".lightbox").fadeOut(500);
+                // });
+                // $("#slide7").on('blur',function(){
+                //     $(this).fadeOut(500);
+                //     $(".lightbox").fadeOut(500);
+                // });
+                // $("#slide8").on('blur',function(){
+                //     $(this).fadeOut(500);
+                //     $(".lightbox").fadeOut(500);
+                // });
+                // $("#slide9").on('blur',function(){
+                //     $(this).fadeOut(500);
+                //     $(".lightbox").fadeOut(500);
+                // });
+                // $("#slide10").on('blur',function(){
+                //     $(this).fadeOut(500);
+                //     $(".lightbox").fadeOut(500);
+                // });
+                // $("#slide11").on('blur',function(){
+                //     $(this).fadeOut(500);
+                //     $(".lightbox").fadeOut(500);
+                // });
+                // $("#slide12").on('blur',function(){
+                //     $(this).fadeOut(500);
+                //     $(".lightbox").fadeOut(500);
+                // });
+                // $("#slide13").on('blur',function(){
+                //     $(this).fadeOut(500);
+                //     $(".lightbox").fadeOut(500);
+                // });
+                // $("#slide14").on('blur',function(){
+                //     $(this).fadeOut(500);
+                //     $(".lightbox").fadeOut(500);
+                // });
+                // $("#slide15").on('blur',function(){
+                //     $(this).fadeOut(500);
+                //     $(".lightbox").fadeOut(500);
+                // });
 
             });
         </script>

@@ -371,6 +371,36 @@ img.shuffle {
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
+@media only screen and (max-width: 1440px) {
+    /* Style adjustments for viewports that meet the condition */
+    #slide1, #slide2, #slide3, #slide4, #slide5, #slide6, #slide7, #slide8, #slide9, #slide10, #slide11, #slide12, #slide13, #slide14, #slide15 {
+    width: 800px;
+    height: 400px;
+    display: none;
+    margin: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: whitesmoke;
+    border: 1px #666 solid;
+    border-radius: 10px;
+    z-index: 2;
+    outline: 0;
+    font-size: .8em;
+}
+#slide5 {
+    height: 660px;
+}
+#slide9 {
+    height: 600px;
+}
+#slide11 {
+    height: 500px;
+}
+}
+
 
 @media only screen and (max-width: 1200px) {
     /* Style adjustments for viewports that meet the condition */
@@ -419,13 +449,52 @@ img.shuffle {
     .rightcolumn {
         display: none;
     }
+    /*.inside {
+        width: 55%;
+        float: left;
+    }
+
+    .imgcontain {
+        text-align: center;
+    }
+
+    .insideright {
+        width: 100%;
+        margin: 0 5%;
+        float: left;
+    }*/
+}
+@media only screen and (max-width: 850px) {
+    /* Style adjustments for viewports that meet the condition */
+    #slide1, #slide2, #slide3, #slide4, #slide5, #slide6, #slide7, #slide8, #slide9, #slide10, #slide11, #slide12, #slide13, #slide14, #slide15 {
+    width: 380px;
+    height: 600px;
+    display: none;
+    position: absolute;
+    top: 10px;
+    background-color: whitesmoke;
+    border: 1px #666 solid;
+    border-radius: 10px;
+    z-index: 2;
+    outline: 0;
+    font-size: .8em;
+    }
+    #slide5 {
+        height: 800px;
+    }
+    #slide9 {
+        height: 720px;
+    }
+    #slide11 {
+        height: 700px;
+    }
     .inside {
         width: 100%;
         float: left;
     }
 
     .imgcontain {
-        text-align: left; /*also centers imagers?!*/
+        text-align: center;
     }
 
     .insideright {
